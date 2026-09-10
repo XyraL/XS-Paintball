@@ -142,24 +142,24 @@
     };
 
     const ROSTER = [
-        { source: 1, citizenid: 'ABC12345', name: 'Alex Mercer', team: 'red', ready: true, host: true, level: 24, alive: true, kills: 14, deaths: 6, assists: 3, score: 14, ping: 32, loadout: { primary: 'WEAPON_CARBINERIFLE', secondary: 'WEAPON_PISTOL', melee: 'WEAPON_KNIFE' } },
-        { source: 2, citizenid: 'DEF67890', name: 'Rae Lin', team: 'red', ready: true, host: false, level: 11, alive: false, kills: 9, deaths: 11, assists: 5, score: 9, ping: 44 },
-        { source: 3, citizenid: 'GHI11223', name: 'Sam Ortiz', team: 'blue', ready: false, host: false, level: 31, alive: true, kills: 17, deaths: 8, assists: 2, score: 17, ping: 28 },
-        { source: 4, citizenid: 'JKL44556', name: 'Nico Vance', team: 'blue', ready: true, host: false, level: 7, alive: true, kills: 4, deaths: 13, assists: 6, score: 4, ping: 61 },
-        { source: 5, citizenid: 'MNO77889', name: 'Priya Raman', team: 'blue', ready: true, host: false, level: 19, alive: true, kills: 11, deaths: 9, assists: 1, score: 11, ping: 37 },
+        { source: 1, citizenid: 'ABC12345', name: 'Vincent Valentine', team: 'red', ready: true, host: true, level: 24, alive: true, kills: 14, deaths: 6, assists: 3, score: 14, ping: 32, loadout: { primary: 'WEAPON_CARBINERIFLE', secondary: 'WEAPON_PISTOL', melee: 'WEAPON_KNIFE' } },
+        { source: 2, citizenid: 'DEF67890', name: 'Nadia Kowalski', team: 'red', ready: true, host: false, level: 11, alive: false, kills: 9, deaths: 11, assists: 5, score: 9, ping: 44 },
+        { source: 3, citizenid: 'GHI11223', name: 'Byron Whitfield', team: 'blue', ready: false, host: false, level: 31, alive: true, kills: 17, deaths: 8, assists: 2, score: 17, ping: 28 },
+        { source: 4, citizenid: 'JKL44556', name: 'Terrence Obi', team: 'blue', ready: true, host: false, level: 7, alive: true, kills: 4, deaths: 13, assists: 6, score: 4, ping: 61 },
+        { source: 5, citizenid: 'MNO77889', name: 'Hollis Barnes', team: 'blue', ready: true, host: false, level: 19, alive: true, kills: 11, deaths: 9, assists: 1, score: 11, ping: 37 },
     ];
 
     const LOBBIES = [
-        { id: 1, code: 'K7QP2', name: 'Friday scrim', state: 'waiting', mode: 'tdm', modeLabel: 'Team Deathmatch', map: 'Nuketown', mapId: 1, players: 5, max: 12, locked: false, wager: 2500, host: 'Alex Mercer', teams: 2, spectators: 0, timeLeft: 600 },
-        { id: 2, code: 'M3XZ8', name: 'Gun game grind', state: 'live', mode: 'gungame', modeLabel: 'Gun Game', map: 'Dock Yard', mapId: 2, players: 8, max: 16, locked: false, wager: 0, host: 'Sam Ortiz', teams: 0, spectators: 2, timeLeft: 214 },
-        { id: 3, code: 'B9RT4', name: 'Private — league', state: 'waiting', mode: 'ctf', modeLabel: 'Capture The Flag', map: 'Nuketown', mapId: 1, players: 2, max: 10, locked: true, wager: 10000, host: 'Priya Raman', teams: 2, spectators: 0, timeLeft: 900 },
+        { id: 1, code: 'K7QP2', name: 'Friday scrim', state: 'waiting', mode: 'tdm', modeLabel: 'Team Deathmatch', map: 'Nuketown', mapId: 1, players: 5, max: 12, locked: false, wager: 2500, host: 'Vincent Valentine', teams: 2, spectators: 0, timeLeft: 600 },
+        { id: 2, code: 'M3XZ8', name: 'Gun game grind', state: 'live', mode: 'gungame', modeLabel: 'Gun Game', map: 'Dock Yard', mapId: 2, players: 8, max: 16, locked: false, wager: 0, host: 'Byron Whitfield', teams: 0, spectators: 2, timeLeft: 214 },
+        { id: 3, code: 'B9RT4', name: 'Private — league', state: 'waiting', mode: 'ctf', modeLabel: 'Capture The Flag', map: 'Nuketown', mapId: 1, players: 2, max: 10, locked: true, wager: 10000, host: 'Hollis Barnes', teams: 2, spectators: 0, timeLeft: 900 },
     ];
 
     const LOBBY_STATE = {
         id: 1, code: 'K7QP2', name: 'Friday scrim', state: 'waiting',
         mode: 'tdm', modeLabel: 'Team Deathmatch', scoreLabel: 'Score',
         mapId: 1, mapName: 'Nuketown',
-        host: 'ABC12345', hostName: 'Alex Mercer',
+        host: 'ABC12345', hostName: 'Vincent Valentine',
         rules: { scoreLimit: 60, timeLimit: 600, respawnTime: 4, spawnProtect: 4, friendlyFire: false, rounds: 3 },
         round: 1, roundWins: {},
         wager: 2500, maxPlayers: 12, locked: false,
@@ -176,7 +176,7 @@
         ok: true,
         isAdmin: true,
         profile: {
-            citizenid: 'ABC12345', name: 'Alex Mercer',
+            citizenid: 'ABC12345', name: 'Vincent Valentine',
             kills: 1284, deaths: 902, assists: 210, headshots: 331, captures: 44,
             wins: 96, losses: 71, matches: 167, bestStreak: 14,
             cosmetics: { tint: 4, kit: 'recruit' },
@@ -277,7 +277,7 @@
             })),
             history: [
                 { map: 'Nuketown', mode: 'tdm', winner: 'red', duration: 512, pot: 15000, players: ROSTER },
-                { map: 'Dock Yard', mode: 'gungame', winner: 'Sam Ortiz', duration: 388, pot: 0, players: ROSTER },
+                { map: 'Dock Yard', mode: 'gungame', winner: 'Byron Whitfield', duration: 388, pot: 0, players: ROSTER },
                 { map: 'Nuketown', mode: 'ctf', winner: 'blue', duration: 604, pot: 40000, players: ROSTER },
             ],
         }),
@@ -380,8 +380,8 @@
         hudHandle('protection', 0);
         hudHandle('streak', { label: 'UAV', remaining: 18 });
 
-        hudHandle('killfeed', { killer: 'Alex Mercer', killerTeam: 'red', victim: 'Nico Vance', victimTeam: 'blue', weapon: 'Carbine', headshot: true });
-        hudHandle('killfeed', { killer: 'Sam Ortiz', killerTeam: 'blue', victim: 'Rae Lin', victimTeam: 'red', weapon: 'Assault SMG' });
+        hudHandle('killfeed', { killer: 'Vincent Valentine', killerTeam: 'red', victim: 'Terrence Obi', victimTeam: 'blue', weapon: 'Carbine', headshot: true });
+        hudHandle('killfeed', { killer: 'Byron Whitfield', killerTeam: 'blue', victim: 'Nadia Kowalski', victimTeam: 'red', weapon: 'Assault SMG' });
         hudHandle('announce', { text: 'UAV overhead', tone: 'inform' });
     }
 
