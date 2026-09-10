@@ -31,6 +31,10 @@ optional('Vote', 'server/vote.lua', {
     Clear = function() end,
 })
 
+optional('Diagnose', 'server/diagnose.lua', {
+    Run = function() return { '^1[XS-Paintball]^0 server/diagnose.lua did not load.' }, 1 end,
+})
+
 optional('Stash', 'server/loadout.lua', {
     Holding = function() return false end,
     Take    = function() return false end,

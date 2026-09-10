@@ -29,6 +29,27 @@ if Config.Commands.reload then
     end, false)
 end
 
+RegisterCommand('pbdebug', function(source)
+    if not allowed(source) then return end
+
+    local lines, problems = Diagnose.Run()
+
+    for _, line in ipairs(lines) do
+        if source == 0 then
+            print(line)
+        else
+            -- Colour codes are console only, so strip them for chat.
+            TriggerClientEvent('chat:addMessage', source, { args = { 'XS', (line:gsub('%^%d', '')) } })
+        end
+    end
+
+    if source ~= 0 then
+        Framework.Notify(source, problems == 0 and 'Nothing obviously wrong.'
+            or ('%d thing(s) need attention — see chat.'):format(problems),
+            problems == 0 and 'success' or 'error')
+    end
+end, false)
+
 RegisterCommand('pblobbies', function(source)
     if not allowed(source) then return end
 

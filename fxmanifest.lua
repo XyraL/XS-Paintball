@@ -68,6 +68,7 @@ server_scripts {
     'server/queue.lua',
     'server/match.lua',
     'server/objectives.lua',
+    'server/diagnose.lua',
     'server/main.lua',
     'server/commands.lua',
 }
