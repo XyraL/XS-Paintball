@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XS-Paintball</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="hud" class="hidden">
+    <div id="hud-goggles" class="hidden"></div>
+    <div id="hud-splat"></div>
+
+    <div id="hud-top">
+        <div id="hud-scores"></div>
+        <div id="hud-clock">
+            <div id="hud-time">10:00</div>
+            <div id="hud-mode">Team Deathmatch</div>
+            <div id="hud-rounds" class="hidden"></div>
+        </div>
+        <div id="hud-objective"></div>
+    </div>
+
+    <div id="hud-killfeed"></div>
+
+    <div id="hud-announce"></div>
+
+    <div id="hud-centre">
+        <div id="hud-hitmarker"></div>
+        <div id="hud-respawn" class="hidden">
+            <div class="respawn-label">Eliminated</div>
+            <div class="respawn-count">4</div>
+            <div class="respawn-hint">Respawning</div>
+        </div>
+        <div id="hud-bounds" class="hidden">
+            <div class="bounds-label">Return to the arena</div>
+            <div class="bounds-count">8</div>
+        </div>
+    </div>
+
+    <div id="hud-bottom">
+        <div id="hud-paint">
+            <div class="paint-track"><div class="paint-fill"></div></div>
+            <div class="paint-meta"><span id="hud-paint-value">100</span><span class="paint-unit">paint left</span></div>
+        </div>
+        <div id="hud-badges"></div>
+    </div>
+
+    <div id="hud-team" class="hidden"></div>
+
+    <div id="hud-loadout" class="hidden"></div>
+
+    <div id="hud-spectate" class="hidden">
+        <div class="spectate-title">Spectating</div>
+        <div class="spectate-name">-</div>
+        <div class="spectate-hint">A / D switch player &nbsp; SPACE free camera &nbsp; BACKSPACE leave</div>
+    </div>
+
+    <div id="hud-vote" class="hidden"></div>
+
+    <div id="hud-queue" class="hidden"></div>
+
+    <div id="hud-scoreboard" class="hidden"></div>
+
+    <div id="hud-result" class="hidden"></div>
+</div>
+
+<div id="host-root" class="hidden"></div>
+
+<div id="app" class="hidden">
+    <div id="page-texture"></div>
+
+    <div class="sheet">
+        <header class="masthead">
+            <div class="mark">
+                <span class="mark-blob"></span>
+                <span class="mark-stack">
+                    <span class="mark-kicker">XyraL</span>
+                    <span class="mark-word">Paintball</span>
+                </span>
+            </div>
+
+            <nav class="tabs" id="nav"></nav>
+
+            <div class="player">
+                <div class="player-badge" id="level-badge">1</div>
+                <div class="player-meta">
+                    <div class="player-name" id="level-name">Rookie</div>
+                    <div class="player-xp" id="level-xp">0 / 400 XP</div>
+                    <div class="player-track"><div class="player-fill" id="level-fill"></div></div>
+                </div>
+            </div>
+
+            <button class="x-btn" id="btn-close" title="Close">&times;</button>
+        </header>
+
+        <div class="subhead">
+            <div class="subhead-title">
+                <h1 id="page-title">Play</h1>
+                <p id="page-sub">Join a lobby or start your own</p>
+            </div>
+            <div class="subhead-actions" id="topbar-actions"></div>
+        </div>
+
+        <section class="content" id="content"></section>
+    </div>
+
+    <div id="modal-root"></div>
+    <div id="toast-container"></div>
+</div>
+
+<script src="js/core.js"></script>
+<script src="js/hud.js"></script>
+<script src="js/panels/play.js"></script>
+<script src="js/panels/lobby.js"></script>
+<script src="js/panels/loadout.js"></script>
+<script src="js/panels/unlocks.js"></script>
+<script src="js/panels/maps.js"></script>
+<script src="js/panels/editor.js"></script>
+<script src="js/panels/stats.js"></script>
+<script src="js/panels/settings.js"></script>
+<script src="js/app.js"></script>
+<script src="js/mock.js"></script>
+
+</body>
+</html>
